@@ -57,6 +57,12 @@ Template.insert.events({
 Template.edit.helpers({
     user: function() {
         return UsersService.getUser(uid);
+    },
+    checkGender: function (gender) {
+        var u = UsersService.getUser(uid);
+        if (u) {  
+            return gender === u.gender;
+        }
     }
 });
 Template.edit.events({
