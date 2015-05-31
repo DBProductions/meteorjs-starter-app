@@ -1,4 +1,4 @@
-<template name="users">
+<template name="list">
     <div class="row">
         <div class="col-md-12 text-right">
             <a class="btn btn-default" href="/insertuser"><i class="fa fa-user fa-fw"></i> Insert</a>
@@ -15,7 +15,7 @@
             </tr>
             {{#each users}}
                 <tr>
-                    <td><a href="/user/{{_id}}">{{email}}</a></td>
+                    <td><a href="/users/{{_id}}">{{email}}</a></td>
                     <td>{{age}}</td>
                     <td>{{gender}}</td>
                     <td>

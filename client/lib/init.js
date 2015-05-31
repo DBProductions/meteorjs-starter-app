@@ -3,21 +3,22 @@ Meteor.subscribe("users");
 
 Session.setDefault("delete", false);
 
-Template.users.helpers({
+Template.list.helpers({
     users: function () {
         return UsersService.getUsers();
     }
 });
 
-Template.userdetail.helpers({
+Template.detail.helpers({
     user: function() {
+        Session.set("delete", false);
         return UsersService.getUser(uid);
     },
     deleteFlag: function () {
-      return Session.get("delete");
+        return Session.get("delete");
     }
 });
-Template.userdetail.events({
+Template.detail.events({
     'click #editBtn': function() {
         Router.go('/edituser/' + uid);
     },
@@ -31,13 +32,12 @@ Template.userdetail.events({
     }
 });
 
-Template.insertuser.helpers({
+Template.insert.helpers({
     user: function() {
         return UsersService.getUser(uid);
     }
 });
-
-Template.insertuser.events({
+Template.insert.events({
     'submit .new-user': function (event) {
         var email = event.target.email.value;
         var age = event.target.age.value;
@@ -54,13 +54,12 @@ Template.insertuser.events({
     }
 });
 
-Template.edituser.helpers({
+Template.edit.helpers({
     user: function() {
         return UsersService.getUser(uid);
     }
 });
-
-Template.edituser.events({
+Template.edit.events({
     'submit .edit-user': function() {
         var email = event.target.email.value;
         var age = event.target.age.value;
@@ -72,7 +71,7 @@ Template.edituser.events({
         });
         event.target.email.value = "";
         event.target.age.value = "";
-        Router.go('/user/' + uid);
+        Router.go('/users/' + uid);
         return false;
     }
 });
