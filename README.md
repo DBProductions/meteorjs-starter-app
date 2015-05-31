@@ -30,7 +30,7 @@ Packages used by this project:
 
 ## Live example  
 
-[Meteor](meteorjs-starter-app.meteor.com)
+[Meteor](http://meteorjs-starter-app.meteor.com)
 
 ## Feedback
 Star this repo if you found it useful. Use the github issue tracker to give feedback on this repo.
