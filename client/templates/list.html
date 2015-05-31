@@ -1,0 +1,34 @@
+<template name="users">
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <a class="btn btn-default" href="/insertuser"><i class="fa fa-user fa-fw"></i> Insert</a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th style="width:8%">&nbsp;</th>
+            </tr>
+            {{#each users}}
+                <tr>
+                    <td><a href="/user/{{_id}}">{{email}}</a></td>
+                    <td>{{age}}</td>
+                    <td>{{gender}}</td>
+                    <td>
+                        <a href='/edituser/{{_id}}' class="btn btn-link" title="Edit"><i class="fa fa-edit fa-fw"></i></a>
+                    </td>            
+                </tr>
+            {{/each}}
+
+            {{#unless users}}
+            <tr>
+                <td colspan="4">Found no users</td>
+            </tr>
+            {{/unless}}
+        </table>
+    </div>
+</template>

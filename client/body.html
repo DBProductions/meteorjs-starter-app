@@ -1,0 +1,27 @@
+
+<body></body>
+
+<template name="AppLayout">
+    <div class="container">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Meteor starter app</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/users"><i class="fa fa-users"></i> Users</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{> yield}}
+    </div>
+    <br>
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted text-right">Meteor starter app</p>
+        </div>
+    </div>
+</template>
