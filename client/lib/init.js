@@ -1,8 +1,9 @@
+Meteor.startup(function() {
+    Meteor.subscribe("users");
+    Session.setDefault("delete", false);
+});
 
-Meteor.subscribe("users");
-
-Session.setDefault("delete", false);
-
+// list
 Template.list.helpers({
     users: function () {
         return UsersService.getUsers();
@@ -11,12 +12,8 @@ Template.list.helpers({
         return UsersService.getUsers().count();
     }
 });
-Template.list.events({
-    'click .change-query': function(event) {
-        Session.set("queryBy", event.target.innerHTML);
-    }
-});
 
+// detail
 Template.detail.helpers({
     user: function() {
         Session.set("delete", false);
@@ -40,6 +37,7 @@ Template.detail.events({
     }
 });
 
+// insert
 Template.insert.helpers({
     user: function() {
         return UsersService.getUser(uid);
@@ -62,6 +60,7 @@ Template.insert.events({
     }
 });
 
+// edit
 Template.edit.helpers({
     user: function() {
         return UsersService.getUser(uid);
