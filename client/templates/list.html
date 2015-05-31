@@ -1,15 +1,16 @@
 <template name="list">
     <div class="row">
-        <div class="col-md-6 info-text">
-            There are <strong>3</strong> users
+        <div class="col-md-9 info-text">
+            There are <strong>{{usersCount}}</strong> users
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-md-3 text-right">
             <a class="btn btn-default" href="/insertuser"><i class="fa fa-user fa-fw"></i> Insert</a>
         </div>
     </div>
-
+    <hr>
     <div class="table-responsive">
         <table class="table table-striped">
+            <tbody>
             <tr>
                 <th>Email</th>
                 <th>Age</th>
@@ -32,6 +33,7 @@
                 <td colspan="4">Found no users</td>
             </tr>
             {{/unless}}
+            </tbody>
         </table>
     </div>
 </template>

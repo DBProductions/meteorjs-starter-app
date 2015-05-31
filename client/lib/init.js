@@ -6,6 +6,14 @@ Session.setDefault("delete", false);
 Template.list.helpers({
     users: function () {
         return UsersService.getUsers();
+    },
+    usersCount: function () {
+        return UsersService.getUsers().count();
+    }
+});
+Template.list.events({
+    'click .change-query': function(event) {
+        Session.set("queryBy", event.target.innerHTML);
     }
 });
 
