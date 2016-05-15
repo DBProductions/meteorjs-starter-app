@@ -12,6 +12,8 @@ Clone the `meteorjs-starter-app` repository and run the application.
 
 You must have git and meteor installed.  
 
+[Installing Meteor](https://www.meteor.com/install)
+
 ### Clone repository
 
 Clone the `meteorjs-starter-app` repository.

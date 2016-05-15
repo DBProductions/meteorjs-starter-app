@@ -55,7 +55,7 @@ Template.insert.events({
         });
         event.target.email.value = "";
         event.target.age.value = "";
-        Router.go('users');
+        Router.go('/users');
         return false;
     }
 });
@@ -73,7 +73,7 @@ Template.edit.helpers({
     }
 });
 Template.edit.events({
-    'submit .edit-user': function() {
+    'submit .edit-user': function(event) {
         var email = event.target.email.value;
         var age = event.target.age.value;
         var gender = event.target.gender.value;
@@ -85,6 +85,7 @@ Template.edit.events({
         event.target.email.value = "";
         event.target.age.value = "";
         Router.go('/users/' + uid);
+        console.log('waa');
         return false;
     }
 });
