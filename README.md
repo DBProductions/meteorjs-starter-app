@@ -25,12 +25,22 @@ Clone the `meteorjs-starter-app` repository.
 
 Packages used by this project:
 
-    iron:router      1.0.7  Routing specifically designed for Meteor
-    meteor-platform  1.2.2  Include a standard set of Meteor packages in your app
-
-## Live example  
-
-[Meteor](http://meteorjs-starter-app.meteor.com)
+    blaze-html-templates   1.0.4  Compile HTML templates into reactive UI with Meteor Blaze
+    check                  1.2.1  Check whether a value matches a pattern
+    ejson                  1.0.11  Extended and Extensible JSON library
+    iron:router            1.0.12  Routing specifically designed for Meteor
+    jquery                 1.11.8  Manipulate the DOM using CSS selectors
+    logging                1.0.12  Logging facility.
+    meteor-base            1.0.4  Packages that every Meteor app needs
+    mobile-experience      1.0.4  Packages for a great mobile user experience
+    mongo                  1.1.7  Adaptor for using MongoDB and Minimongo over DDP
+    random                 1.0.9  Random number generator and utilities
+    reload                 1.1.8  Reload the page while preserving application state.
+    session                1.1.5  Session variable
+    spacebars              1.0.11  Handlebars-like template language for Meteor
+    standard-minifier-css  1.0.6  Standard css minifier used with Meteor apps by default.
+    standard-minifier-js   1.0.6  Standard javascript minifiers used with Meteor apps by default.
+    tracker                1.0.13  Dependency tracker to allow reactive callbacks
 
 ## Feedback
 Star this repo if you found it useful. Use the github issue tracker to give feedback on this repo.
